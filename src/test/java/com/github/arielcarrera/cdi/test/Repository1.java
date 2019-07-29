@@ -74,6 +74,7 @@ public class Repository1 {
         throw new RuntimeException("for rollback");
     }
     
+    @Transactional
     public void clear() {
         assert entityManager != null;
         findAll().forEach(entityManager::remove);

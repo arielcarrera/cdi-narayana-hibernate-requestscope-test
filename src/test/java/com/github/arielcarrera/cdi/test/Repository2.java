@@ -38,6 +38,7 @@ public class Repository2 {
         return quickstartEntity.getId();
     }
 
+    @Transactional
     public void clear() {
         assert entityManager != null;
         findAll().forEach(entityManager::remove);
