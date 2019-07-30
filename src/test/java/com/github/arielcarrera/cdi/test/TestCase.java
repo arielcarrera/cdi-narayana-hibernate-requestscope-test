@@ -44,7 +44,7 @@ import com.github.arielcarrera.cdi.test.entities.TestEntity;
 public class TestCase {
 
     @Rule
-    public WeldInitiator weld = WeldInitiator.from(new Weld()).activate(RequestScoped.class).inject(this).build();
+    public WeldInitiator weld = WeldInitiator.from(new Weld()).inject(this).build();
 
     /**
      * JNDI server.
